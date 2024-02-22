@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.typekit.net/omh1idz.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="body">
+        <h1 id="title">pixelate your typeface</h1>
+
+        <div id="inputs">
+
+            <label for="font-size" class="label" >FONT-SIZE</label> 
+            <input type="range" min="15" max="60" name="font-size" id="font-size-input">
+
+            <label for="kerning" class="label">KERNING</label> 
+            <input type="range" min="0" max="10" name="kerning" id="font-kerning-input">
+
+            <label for="round" class="label">ROUND</label> 
+            <input type="range" min="0" max="10" name="round">
+
+            <label for="pixel-size" class="label">PIXEL SIZE</label> 
+            <input type="range" min="0" max="10" name="pixel-size">
+        </div>
+
+        <div class="text-side">
+            <main></main>
+
+            <div id="text-output">pixelate me!</div>
+
+            <input type="text" placeholder="write what you want!" id="text-input">
+        </div>
+
+        <div id="color-changer">CHANGE THE COLOR</div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>

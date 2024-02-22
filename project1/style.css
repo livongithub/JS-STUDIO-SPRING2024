@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'right-grotesk';
+    src: url(right-grotesk.otf);
+}
+
+#body{
+    width: 100vw;
+    height: 100vh;
+}
+
+#title{
+    font-family: 'right-grotesk';
+    text-transform: uppercase;
+    font-size: 150px;
+    font-weight: 400;
+    position: absolute;
+    top: -110px;
+    left: 20px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 20px;
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 30vh;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+input[type="range"]{
+    margin-bottom: 20px;
+    text-decoration: none;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    padding: 3px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.label{
+    left: 50px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: white;
+    appearance: none;
+   /* margin-top: -2px; Centers thumb on the track */
+   background-color: white;
+   height: 30px;
+   border-radius: 50%;
+   width: 30px; 
+}
+#text-input{
+    position: absolute;
+    right: 100px;
+    width: 60vw;
+    bottom: 150px;
+
+}
+
+input[type=text] {
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    font-size: 30px;
+    opacity: 100%;
+  }
+
+#text-output{
+    width: 60vw;
+    text-align: center;
+    height: 600vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 100px;
+    top: 350px;
+}
+
+#color-changer{
+    width: 280px;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
