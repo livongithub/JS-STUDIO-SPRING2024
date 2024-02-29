@@ -1,41 +1,110 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>CHANGING STATES</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.typekit.net/omh1idz.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/msi3urp.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="body">
-        <h1 id="title">pixelate your typeface</h1>
+    <body>
 
-        <div id="inputs">
+        <div id="canvas2-container"></div>
+       
+<div id="input-cont">
+<div id="title">
+    <p>PIXELATE YOUR TYPEFACE</p>
+</div>
+<div class="box">
+    <h1> CHARACTER</h1>
+    <div id="chara-cont">
+        
 
-            <label for="font-size" class="label" >FONT-SIZE</label> 
-            <input type="range" min="15" max="60" name="font-size" id="font-size-input">
-
-            <label for="kerning" class="label">KERNING</label> 
-            <input type="range" min="0" max="10" name="kerning" id="font-kerning-input">
-
-            <label for="round" class="label">ROUND</label> 
-            <input type="range" min="0" max="10" name="round">
-
-            <label for="pixel-size" class="label">PIXEL SIZE</label> 
-            <input type="range" min="0" max="10" name="pixel-size">
+        <div class="section">
+        <label for="size-input" class="label" name="hilight">FONT SIZE</label>
+        <input type="range" id="size-input" min="2" max="40">
         </div>
 
-        <div class="text-side">
-            <main></main>
+        <DIV class="section">
+        <label for="pixel-input" class="label" name="hilight">PIXEL SIZE</label>
+        <input type="range" id="pixel-input" min="5" max="10">
+        </DIV>
 
-            <div id="text-output">pixelate me!</div>
+        <div class="section">
+        <label for="roundness" class="label"name="hilight">ROUNDNESS</label>
+        <input type="range" id="roundness" min="0" max="5">
+        </div>
+    </div>
+</div>
+    <div class="box">
+        <h1> PARAGRAPH</h1>
 
-            <input type="text" placeholder="write what you want!" id="text-input">
+    <div id="para-cont">
+
+
+        <div class="section">
+        <label for="line-height" class="label" name="hilight">LINE-HEIGHT</label>
+        <input type="range" id="line-height" min=".8" max="3" step=".1">
+        </div class="section">
+
+        <div class="section">
+        <label for="x-dist" class="label" name="hilight">X DISTANCE</label>
+        <input type="range" id="x-dist" min="0" max="60">
         </div>
 
-        <div id="color-changer">CHANGE THE COLOR</div>
+        <div class="section">
+        <label for="y-dist" class="label" name="hilight">Y DISTANCE</label>
+        <input type="range" id="y-dist" min="0" max="60">
+        </div>
 
-        <script src="script.js" async defer></script>
+
+        <div id="para-align">
+            <div class="section-row">
+            <input type="radio" id="left" name="alignment" value="LEFT" checked/>
+            <label for="left" name="alignment">left</label>
+        </div>
+        <div class="section-row">
+            <input type="radio" id="center" name="alignment" value="CENTER" />
+            <label  for="center" name="alignment">center</label>
+        </div>
+          <div class="section-row">
+            <input type="radio" id="right" name="alignment" value="RIGHT" />
+            <label  for="right" name="alignment">right</label>
+          </div>
+ 
+        
+        </div>
+    </div>
+</div>
+<div class="box">
+<h1> CUSTOMIZE</h1>
+    <div id="buttons"> 
+        <button id="change-font">Change the font</button>
+        <button id="display-grid">Display Grid</button>
+        <button id="change-color">Change the color</button>
+        <button id="rand-button">Randomize!</button>
+        </div>
+    </div>
+</div>
+<div id="canvas-cont">
+        <main id="canvas1-container"></main>
+        <div class="box-inp-text">
+        <input type="text" id="text-input" placeholder="Enter text here">
+        </div>
+    </div>
+
+
+<div id="message-page">
+    <img id="text-message" src="imgs/text-center.svg"></img>
+
+    <div id="arrow"></div>
+
+</div>
+        <script src="sketch.js" async defer></script>
+
     </body>
 </html>

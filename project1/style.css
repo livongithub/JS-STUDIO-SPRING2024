@@ -1,101 +1,246 @@
 @font-face {
-    font-family: 'right-grotesk';
-    src: url(right-grotesk.otf);
+    font-family: 'Mono';
+    src: url(fonts/mono.otf);
 }
 
-#body{
-    width: 100vw;
-    height: 100vh;
-}
 
-#title{
-    font-family: 'right-grotesk';
-    text-transform: uppercase;
-    font-size: 150px;
-    font-weight: 400;
-    position: absolute;
-    top: -110px;
-    left: 20px;
-}
 
-#inputs{
+
+body{
     display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 20px;
+    font-family: 'Mono';
+    text-transform: uppercase;
     font-size: 25px;
-    position: absolute;
-    left: 20px;
-    top: 30vh;
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #1e1e1e;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -10px;
+}
+
+.label{
+    background-color: #F6F5E7;
+    color:#1e1e1e;
+    width: 170px;
+    height: 22px;
+    line-height: 27px;
+    text-align: left;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    display: inline-block;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #F6F5E7;
+    appearance: none;
+   height: 19px;
+   width: 30px; 
 }
 input[type="range"]{
     margin-bottom: 20px;
     text-decoration: none;
     -webkit-appearance: none;
-    border-radius: 20px;
-    padding: 3px;
-    height: 50px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 25px;
+    width: 200px;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid #F6F5E7;
     cursor: pointer;
-}
-.label{
-    left: 50px;
+    margin-top: -.25px;
+    margin-left: 5px;
 }
 
-input[type="range"]::-webkit-slider-thumb{
+h1{
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+#canvas-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+#canvas1-container{
+    position: relative;
+    width: 640px;
+    height: 480px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left:56.5px;
+    padding-right: 56.5px;
+    border: 2px solid #F6F5E7;
+    margin-top: -1.25px;
+    margin-left: -2px;
+}
+
+#para-cont, #chara-cont{
+    display: flex;
+    flex-direction: column;
+    gap: -20px;
+    position: relative;
+}
+
+input[type=range]{
+    width: 327.5px;
+    /* height: 32px; */
+}
+
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 260px);
+    gap: 5px;
+}
+
+#buttons>*{
+    font-family: 'Mono';
+    text-transform: uppercase;
+    font-size: 25px;
+    background-color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    border-radius: 0%;
+    transition: 100ms;
+}
+#buttons>*:hover{
+    background-color: #1e1e1e;
+    color: #1e1e1e;
+}
+
+#para-align{
+    display: flex;
+    flex-direction: row;
+    width: 255px;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.box{
+    border: 2px solid #1e1e1e;
+    padding: 10px;
+    margin-top: -2px;
+}
+
+#title{
+    border: 2px solid #F6F5E7;
+    padding: 5px;
+    padding-left: 10px;
+    height: 30px;
+    margin-top: -43px;
+}
+
+p{
+    margin: 0px;
+}
+
+input[type="radio"] {
+    display: grid;
+    place-content: center;
+    outline: 2px solid #F6F5E7;
+    border-radius: 0px;
+    width: 22px;
+    height: 22px;
     -webkit-appearance: none;
-    background-color: white;
-    appearance: none;
-   /* margin-top: -2px; Centers thumb on the track */
-   background-color: white;
-   height: 30px;
-   border-radius: 50%;
-   width: 30px; 
-}
-#text-input{
-    position: absolute;
-    right: 100px;
-    width: 60vw;
-    bottom: 150px;
+    margin-left: 5px;
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 0px;
+    transform: scale(0);
+    background-color: #F6F5E7;
+    -webkit-appearance: none;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(.75);
+    border-radius: 0px;
+    -webkit-appearance: none;
+  }
 
-}
+  .section-row{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+  }
 
-input[type=text] {
+  input[type=text] {
     -webkit-appearance: none;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #F6F5E7;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: transparent;
     font-size: 30px;
     opacity: 100%;
+    margin-top: 10px;
+  }
+  .box-inp-text{
+    border: 2px solid #F6F5E7;
+    padding: 10px;
+    margin-left: -2px;
+    margin-top: -2px;
   }
 
-#text-output{
-    width: 60vw;
-    text-align: center;
-    height: 600vh;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 100px;
-    top: 350px;
-}
+  input[type=text]::placeholder{
+    color:grey;
+    opacity: .8;
+  }
 
-#color-changer{
-    width: 280px;
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 25px;
-    border: 1px solid white;
-    padding: 5px;
-    text-align: center;
-    border-radius: 50px;
-    color: white;
-    top: 20px;
-    right: 20px;
+
+  #message-page{
     position: absolute;
-}
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #DE5D2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5em;
+    animation: outofframe 500ms ease-in-out 0s 1;
+    animation-play-state: paused;
+  }
+  @keyframes outofframe {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: -1000px;
+    }
+  }
+
+
+  #text-message{
+    margin-top: 90px;
+  }
+
+  #arrow{
+    width: 100px;
+    height: 100px;
+    background-image: url(imgs/arrow.svg);
+    transition: 100ms ease-in-out;
+  }
+
+  #arrow:hover{
+    background-image: url(imgs/arrow-overlay.svg);
+
+  }
+
