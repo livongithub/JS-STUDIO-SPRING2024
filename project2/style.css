@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Supply';
+  src: url(fonts/supply.otf);
+}
+@font-face {
+  font-family: 'OtBrut';
+  src: url(fonts/OTBrut.otf);
+}
+@font-face {
+  font-family: 'Ot Italic';
+  src: url(fonts/ot-italic.otf);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+}
+#canv {
+  display: block;
+  border: 2px solid #F6F5E7;
+  padding: 30px;
+}
+button{
+  font-family: 'Supply';
+  font-weight: 100;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #F6F5E7;
+  color: #F6F5E7;
+  font-size: 23px;
+  width: 189px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 56px;
+  transition: all 100ms ease-in-out;
+}
+button:hover{
+  color: #1e1e1e;
+  background-color: #F6F5E7;
+}
+#contain-info{
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  border: 2px solid #F6F5E7;
+  padding: 30px;
+  margin-left: 2px;
+  justify-content: space-between;
+}
+
+#title-tjrsB{
+  color: #F6F5E7;
+  font-family: 'OtBrut';
+  font-weight: 100;
+  font-size: 40px;
+  width: 191px;
+  line-height: 37px;
+  padding: none;
+  margin: 0px;
+}
+
+#contain{
+  display: flex;
+  /* gap: 60px; */
+  align-items: top;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#contain-button{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+#song-playing{
+  color: #F6F5E7;
+  font-family: 'Ot Italic';
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+#module{
+  position: absolute;
+  width: 101vw;
+  height: 101vh;
+  background-color: #9895E8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10em;
+  padding-top: 100px;
+}
+#tag{
+  margin-top: -90px;
+}
+
+#arrow{
+  color: red;
+}
+
+#module{
+  transition: all 200ms ease-in-out;
+}
