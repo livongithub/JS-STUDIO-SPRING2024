@@ -25768,10 +25768,20 @@ for(i=0; i<numOfSleeves; i++){
   sleeve.style.height = '150px';
   sleeve.style.width = '100vw';
   sleeve.style.backgroundColor = '#ACACAC';
-  sleeve.style.opacity = '0.25';
+  sleeve.style.opacity = '0.4';
   sleeve.style.position = 'absolute';
   sleeve.style.left = '0px';
   sleeve.style.top = `${i*350 + 380}px`
   sleeve.style.zIndex = '100'
   bod.append(sleeve)
 }
+
+
+let arrow = document.getElementById("arrow")
+let mod = document.getElementById("begin-module")
+
+
+arrow.addEventListener("click", ()=>{
+  mod.style.marginTop = "-110vh"
+  bod.style.overflow = "scroll"
+})

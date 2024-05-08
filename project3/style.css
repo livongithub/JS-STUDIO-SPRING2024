@@ -11,6 +11,8 @@ body{
     top: 50px;
     left: 3.5%;
     font-family: 'EB Trainer';
+    background-color: #16356E;
+    overflow: hidden;
 }
 
 #container{
@@ -276,7 +278,38 @@ img{
     z-index: 100000;
     font-size: 16px;
     background-color: transparent;
-    color:#16356E;
-    border: 1px solid #16356E;
+    color:#FFFEEA;
+    border: 1px solid #FFFEEA;
     width: 150px;
+    transition: all 100ms ease-in-out;
+}
+
+#viz-button:hover{
+    color:#16356E;
+    background-color: #FFFEEA;
+}
+
+
+#begin-module{
+    width: 100vw;
+    height: 100vh;
+    background-color: #4C9A9B;
+    position: absolute;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000000000;
+    gap: 15vh;
+    transition: 200ms ease-in-out;
+}
+
+#message{
+    width: 550px;
+}
+
+#arrow{
+    width: 100px;
 }

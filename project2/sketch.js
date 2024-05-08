@@ -1,6 +1,8 @@
 let arrow = document.getElementById('arrow')
 let module = document.getElementById('module')
 
+module.style.transition = "all 200ms ease-in-out"
+
 arrow.addEventListener('click', ()=>{
   module.style.marginTop = '-130vw'
   module.style.display = 'hidden'
